@@ -115,13 +115,15 @@ class Connection(object):
                        email_address,
                        merge_vars,
                        email_type='text',
-                        double_optin=True):
+                       double_optin=True,
+                       send_welcome=False):
         return self._api_call(method='listSubscribe',
                               id=id,
                               email_address=email_address,
                               merge_vars=merge_vars,
                               email_type=email_type,
-                              double_optin=double_optin)
+                              double_optin=double_optin,
+                              send_welcome=send_welcome)
 
     def list_unsubscribe(self,
                          id,
